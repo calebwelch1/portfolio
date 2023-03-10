@@ -2,6 +2,7 @@
 // import jQuery from 'jquery'
 import $ from 'jquery'
 // import pJs from './particles.js'
+import resume from './Welch_Caleb_Full_Stack_Resume.pdf';
 
 export default {
   data() {
@@ -9,6 +10,8 @@ export default {
       showAbout:false,
       showContact: false,
       showWork: false,
+      viewResume: false,
+      resume,
      }
   },
   mounted() {
@@ -98,36 +101,63 @@ closecontact(){
     <div id="middle" class="animated slideInDown" style="animation-delay:2.0s;">
         <h1>caleb welch</h1>
         <h2>Artist /  Software Developer / Human</h2>
+        <div>
+          <a href="https://github.com/calebwelch1" target="_blank" class="h-3 w-3"
+            style="border-radius: 9999px; margin: 1rem;">
+              <img class="h-2 w-2 filter-white" src="../icons/github.png" style="margin-top:0.4rem; margin: 1rem;" alt="images made by https://www.flaticon.com"/>
+            </a>
+        <a href="https://www.instagram.com/therealcalebwelch/" target="_blank" class="h-3 w-3"
+            style="border-radius: 9999px; margin: 1rem;">
+              <img class="h-2 w-2 filter-white" src="../icons/instagram.svg" style="margin-top:0.4rem; margin: 1rem;"/>
+            </a>
+            <a href="https://www.linkedin.com/in/caleb-welch-502851121/" target="_blank" class="h-3 w-3"
+            style="border-radius: 9999px; margin: 1rem;">
+              <img class="h-2 w-2 filter-white" src="../icons/linkedin.svg" style="margin-top:0.4rem; margin: 1rem;"/>
+            </a>
+          </div>
         <div id="menu">
             <a @click="showAbout = !showAbout">about</a>
             <a @click="showWork = !showWork">work</a>
             <a @click="showContact = !showContact">contact</a>
         </div>
-        <table>
+        <!-- <table>
                 <tr>
                     <td class="animated zoomIn" style="animation-delay:2.2s;"><a class="social"><i class="fab fa-facebook"></i></a></td>
                     <td class="animated zoomIn" style="animation-delay:2.4s;"><a class="social"><i class="fab fa-twitter"></i></a></td>
                     <td class="animated zoomIn" style="animation-delay:2.6s;"><a class="social"><i class="fab fa-instagram"></i></a></td>
                     <td class="animated zoomIn" style="animation-delay:2.8s;"><a class="social"><i class="fab fa-dribbble"></i></a></td>
                 </tr>
-        </table>
+        </table> -->
     </div>
     <Transition name="work">
     <div v-if="showWork" id="work_container" class="container" style="display: inherit;">
         <div @click="showWork = !showWork">&gt;</div>
         <h1>works.</h1>
         <section>
-            <h2>work title</h2>
+            <h2>C-Collection</h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+               Media important to my development as a human.
             </p>
             <div id="used">
-                <div><i class="fas fa-circle"></i>&nbsp;HTML5</div>
+                <div><i class="fas fa-circle"></i>&nbsp;Vue 3</div>
                 <div><i class="fas fa-circle"></i>&nbsp;CSS3</div>
+                <div><i class="fas fa-circle"></i>&nbsp;SCSS</div>
                 <div><i class="fas fa-circle"></i>&nbsp;Javascript</div>
+                <div><i class="fas fa-circle"></i>&nbsp;Adobe After Effects</div>
             </div>
-            <button class="btn_one">button 1</button>
-            <button class="btn_two">button 2</button>
+            <a target="_blank" href="https://calebwelch1.github.io/c-collection/" ><button class="btn_one">Visit</button></a>
+        </section>
+        <section>
+            <h2>UI/UX</h2>
+            <p>
+                Figma Designs (hosted on legacy site)
+            </p>
+            <div id="used">
+                <div><i class="fas fa-circle"></i>&nbsp;Figma</div>
+                <div><i class="fas fa-circle"></i>&nbsp;Wireframing</div>
+                <div><i class="fas fa-circle"></i>&nbsp;UI/UX Design</div>
+            </div>
+            <a target="_blank" href="https://calebwelch1.github.io/#/UIPortfolio" ><button class="btn_one">Visit</button></a>
         </section>
     </div>
   </Transition>
@@ -138,17 +168,25 @@ closecontact(){
             <section>
                 <h2>about me</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Hey! Thanks for visiting my site. I'm a software developer based in the greater Boston area. I specialize in the front end but I am proficient in back end work as well. I'm currently collecting Amazon Web Services certifications on my journey to AWS DevOps Mastery.
+                    I'm experienced in building client facing, fully custom applications with typescript, javascript, CSS, SCSS and Nodejs in an Agile Development system. Creates cloud solutions with in-depth AWS knowledge.
+
                 </p>
             </section>
             <section>
                 <h2>skills</h2>
                 <p>
-                    i do eveything ;)
+                  Javascript ES6 / jQuery	/ REST  / MySQL	/ Git(Git Flow)	/ React / Redux	/ Wireframing /
+TypeScript	/ GraphQL	/ Github Issues	/ Vue3 / Figma /
+CSS / SASS / LESS	/	SCRUM / Agile	/ AngularJS	/ Prototyping /
+HTML / XHTML / Jade / NodeJS / Github / Bootstrap / Adobe Suite / Webpack / End to End Testing	/ Jira / User Stories
+508 Accessibility / AWS / Atomic Design
                 </p>
+                <h2>resume</h2>
+                <button class="btn_one" @click="viewResume = !viewResume">View Resume</button>
+                <Transition name="contact">
+                <iframe v-if="viewResume" :src="resume" width="100%" height="500px"></iframe>
+                </Transition>
             </section>
         </div>
       </Transition>
@@ -158,20 +196,18 @@ closecontact(){
             <h1>contact.</h1>
             <section>
                 <h2>contact me</h2>
-                <p>
-                    <form>
-                        <input type="text" placeholder="name" required>
-                        <input type="email" placeholder="email" required><br>
-                        <textarea placeholder="your message" required rows="5"></textarea><br>
-                        <button class="btn_one">send</button>
-                    </form> 
-                </p>
+                <div style="color:white;margin-top:10rem;margin-bottom:5rem;"> Email me: calebwelch.design@gmail.com </div>
+            <a href="https://www.instagram.com/therealcalebwelch/" target="_blank" class="h-3 w-3"
+            style="border-radius: 9999px; margin: 1rem;">
+              <img class="h-2 w-2 filter-white" src="../icons/instagram.svg" style="margin-top:0.4rem; margin: 1rem;"/>
+            </a>
+            <a href="https://www.linkedin.com/in/caleb-welch-502851121/" target="_blank" class="h-3 w-3"
+            style="border-radius: 9999px; margin: 1rem;">
+              <img class="h-2 w-2 filter-white" src="../icons/linkedin.svg" style="margin-top:0.4rem; margin: 1rem;"/>
+            </a>
             </section>
         </div>
       </Transition>
-        <div id="footer">
-            made on earth by a human <br> <a href="https://imfunniee.github.io">imfunniee</a>
-        </div>
     <!-- <script src="index.js" type="text/javascript"></script>
     <script src="particles.js"></script>
     <script src="app.js"></script> -->
@@ -221,6 +257,18 @@ closecontact(){
 .contact-leave-to {
   transform: translateY(200px);
   opacity: 0;
+}
+
+.filter-white{
+  filter: invert(100%) sepia(4%) saturate(7482%) hue-rotate(233deg) brightness(113%) contrast(95%);
+}
+
+.h-2 {
+  height:2rem;
+}
+
+.w-2 {
+  width: 2rem;
 }
 </style>
 
